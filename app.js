@@ -37,4 +37,4 @@ function draw(c) {
     const endY = c.offsetY;
 
     // Clear the canvas and redraw to avoid artifacts
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height)};
