@@ -14,7 +14,7 @@ document.querySelector("html").addEventListener("mousemove", event => {
 
 
 
-document.querySelector("html").addEventListener("mousemove", function(move){
+document.addEventListener("mousemove", function(move){
     const x=info.x;
     const y=into.y;
 
