@@ -6,8 +6,6 @@ const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 let isDrawing = true;
 let startX, startY;
-let currentShape = 'line';
-let selectedColor = '#000000';
 
 // Adds event listeners for mouse events to handle the controls drawing.
 canvas.addEventListener('mousedown', startDrawing);
@@ -28,13 +26,9 @@ function stopDrawing() {
     isDrawing = false;
 }
 
-
 // Drawing based on selected shape
 function draw(c) {
     if (!isDrawing) return;
-
     const endX = c.offsetX;
     const endY = c.offsetY;
-
-    // Clear the canvas and redraw to avoid artifacts
-    ctx.clearRect(0, 0, canvas.width, canvas.height)};
+}
