@@ -7,13 +7,7 @@ const canvas = document.getElementById('myCanvas'); // Get the canvas element
 const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 
-//Mouse Events
-//document.querySelector("html").addEventListener("mousemove", event => {
- //   console.log(`X: ${event.clientX} Y: ${event.clientY}`);
-//})
-
-
-let isDrawing = false;
+let isDrawing = true;
 let startX, startY;
 let currentShape = 'line';
 let selectedColor = '#000000';
