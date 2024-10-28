@@ -9,7 +9,6 @@ const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 let drawing = true;
 let startX, startY;
-let currentShape = 'line';
 
 // Adds event listeners for mouse events to handle the controls drawing.
 canvas.addEventListener('mousedown', startDrawing);
@@ -33,5 +32,5 @@ function Drawing(line) {
 
     // Stop drawing
 function stopDrawing() {
-    isDrawing = false;
+    drawing = false;
 }
