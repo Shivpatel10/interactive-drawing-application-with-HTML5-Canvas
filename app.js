@@ -18,7 +18,7 @@ canvas.addEventListener('mouseup', stopDrawing);
 
 //Drawing
 function startDrawing(event) {
-    isDrawing = true;
+    isDrawing;
     startX = event.offsetX;
     startY = event.offsetY;
     ctx.beginPath();
