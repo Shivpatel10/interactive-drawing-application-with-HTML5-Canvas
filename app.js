@@ -7,7 +7,7 @@ const canvas = document.getElementById('myCanvas'); // Get the canvas element
 const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 
-let drawing = false;
+let drawing = true;
 let startX, startY;
 let currentShape = 'line';
 
