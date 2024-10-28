@@ -36,3 +36,22 @@ function startDrawing(c) {
 function stopDrawing() {
     isDrawing = false;
 }
+
+
+// Drawing based on selected shape
+function draw(c) {
+    if (!isDrawing) return;
+
+    const endX = c.offsetX;
+    const endY = c.offsetY;
+
+    // Clear the canvas and redraw to avoid artifacts
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    switch (currentShape) {
+        case 'line':
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
+            ctx.stroke();
+            break;
+    }}
