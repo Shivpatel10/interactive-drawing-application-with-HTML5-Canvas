@@ -25,11 +25,11 @@ function startDrawing(line) {
 }
 
 // Drawing Stop
-//function endDrawing(line) {
-  //  if (!drawing) return;
-    //const endX = line.offsetX;
-    //const endY = line.offsetY;
-//}
+function Drawing(line) {
+    if (!drawing) return;
+    const endX = line.offsetX;
+    const endY = line.offsetY;
+}
 
     // Stop drawing
 function stopDrawing() {
