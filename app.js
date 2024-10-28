@@ -40,6 +40,6 @@ function draw(event) {
 
 
 // Clear the canvas when the 'Clear Canvas' button is clicked
-//document.getElementById('canvasClear').addEventListener('click', function() {
-//    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
-//});
+document.getElementById('canvasClear').addEventListener('click', function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+});
