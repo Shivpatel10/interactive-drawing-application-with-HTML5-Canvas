@@ -22,17 +22,14 @@ function startDrawing(line) {
     startY = line.offsetY;
     ctx.beginPath();
 }
+    // Stop drawing
+    function stopDrawing() {
+        isDrawing = false;
+    }
 
 function Drawing(line) {
     if (!isDrawing) return;
     const endX = line.offsetX;
     const endY = line.offsetY;
 }
-
-    // Stop drawing
-function stopDrawing() {
-    isDrawing = false;
-}
-
-
 
