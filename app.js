@@ -12,24 +12,24 @@ let startX, startY;
 
 // Adds event listeners for mouse events to handle the controls drawing.
 canvas.addEventListener('mousedown', startDrawing);
-canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mousemove', Drawing);
 canvas.addEventListener('mouseup', stopDrawing);
 
 //Drawing
-function startDrawing(line) {
+function startDrawing(event) {
     isDrawing = true;
-    startX = line.offsetX;
-    startY = line.offsetY;
+    startX = event.offsetX;
+    startY = event.offsetY;
     ctx.beginPath();
 }
+
+function Drawing(event) {
+    if (!isDrawing) return;
+    const endX = event.offsetX;
+    const endY = event.offsetY;
+}
+
     // Stop drawing
     function stopDrawing() {
         isDrawing = false;
     }
-
-function Drawing(line) {
-    if (!isDrawing) return;
-    const endX = line.offsetX;
-    const endY = line.offsetY;
-}
-
