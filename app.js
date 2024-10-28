@@ -7,12 +7,12 @@ const canvas = document.getElementById('myCanvas'); // Get the canvas element
 const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 
-let isDrawing = true;
+let isDrawing = false;
 let startX, startY;
 
 // Adds event listeners for mouse events to handle the controls drawing.
 canvas.addEventListener('mousedown', startDrawing);
-canvas.addEventListener('mousemove', Drawing);
+canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', stopDrawing);
 
 //Drawing
@@ -23,7 +23,7 @@ function startDrawing(event) {
     ctx.beginPath();
 }
 
-function Drawing(event) {
+function draw(event) {
     if (!isDrawing) return;
     const endX = event.offsetX;
     const endY = event.offsetY;
