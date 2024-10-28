@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 let isDrawing = true;
 let startX, startY;
-let selectedColor = '#000000';
+let selectedColor = 'black';
 
 // Adds event listeners for mouse events to handle the controls drawing.
 canvas.addEventListener('mousedown', startDrawing);
