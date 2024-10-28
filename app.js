@@ -14,11 +14,21 @@ document.querySelector("html").addEventListener("mousemove", event => {
 
 
 
-document.addEventListener("mousemove", function(move){
-    const x=info.x;
-    const y=into.y;
+// Adds event listeners for mouse events to handle the controls drawing.
+canvas.addEventListener('mousedown', startDrawing);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', stopDrawing);
 
-    ctx.beginPath()
-    ctx.arc(x,y,20,0,Math.PI*2);
-    ctx.stroke();
-});
+// drawing
+function startDrawing(c) {
+    isDrawing = true;
+    startX = c.offsetX;
+    startY = c.offsetY;
+    ctx.beginPath();
+    ctx.strokeStyle = selectedColor;
+}
+
+// Stop drawing
+function stopDrawing() {
+    isDrawing = false;
+}
