@@ -18,7 +18,7 @@ canvas.addEventListener('mouseup', stopDrawing);
 
 //Drawing
 function startDrawing(event) {
-    isDrawing;
+    isDrawing = true;
     startX = event.offsetX;
     startY = event.offsetY;
     ctx.beginPath();
@@ -29,6 +29,8 @@ function draw(event) {
     if (!isDrawing) return;
     const endX = event.offsetX;
     const endY = event.offsetY;
+    ctx.lineTo(endX, endY); // Draw a line to the current mouse position
+    ctx.stroke(); // Creates the line
 }
 
     // Stop drawing
