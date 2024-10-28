@@ -8,11 +8,15 @@ const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 
 //Mouse Events
-document.querySelector("html").addEventListener("mousemove", event => {
-    console.log(`X: ${event.clientX} Y: ${event.clientY}`);
-})
+//document.querySelector("html").addEventListener("mousemove", event => {
+ //   console.log(`X: ${event.clientX} Y: ${event.clientY}`);
+//})
 
 
+let isDrawing = false;
+let startX, startY;
+let currentShape = 'line';
+let selectedColor = '#000000';
 
 // Adds event listeners for mouse events to handle the controls drawing.
 canvas.addEventListener('mousedown', startDrawing);
