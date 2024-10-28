@@ -22,6 +22,7 @@ function startDrawing(event) {
     startX = event.offsetX;
     startY = event.offsetY;
     ctx.beginPath();
+    ctx.strokeStyle = selectedColor;
 }
 
 function draw(event) {
