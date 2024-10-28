@@ -1,10 +1,13 @@
+// Task 1: Set Up the HTML Structure.
+
+
 // Task 2: Configure the JavaScript for Drawing Context
 
 const canvas = document.getElementById('myCanvas'); // Get the canvas element
 const ctx = canvas.getContext('2d'); // Get the 2D drawing context
 
 
-let isDrawing = true;
+let isDrawing = false;
 let startX, startY;
 
 // Adds event listeners for mouse events to handle the controls drawing.
@@ -12,23 +15,27 @@ canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', stopDrawing);
 
-// drawing
-function startDrawing(c) {
+//Drawing
+function startDrawing(event) {
     isDrawing = true;
-    startX = c.offsetX;
-    startY = c.offsetY;
+    startX = event.offsetX;
+    startY = event.offsetY;
     ctx.beginPath();
-    ctx.strokeStyle = selectedColor;
 }
 
-// Stop drawing
-function stopDrawing() {
-    isDrawing = false;
-}
-
-// Drawing based on selected shape
-function draw(c) {
+function draw(event) {
     if (!isDrawing) return;
-    const endX = c.offsetX;
-    const endY = c.offsetY;
+    const endX = event.offsetX;
+    const endY = event.offsetY;
 }
+
+    // Stop drawing
+    function stopDrawing() {
+        isDrawing = false;
+    }
+
+
+// Clear the canvas when the 'Clear Canvas' button is clicked
+document.getElementById('canvasClear').addEventListener('click', function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+});
